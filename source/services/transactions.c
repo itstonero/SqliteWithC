@@ -38,12 +38,14 @@ static int SaveTransactionDelegate(sqlite3_stmt * processHandler, void * transac
 
 static int UpdateTransactionDelegate(sqlite3_stmt * processHandler, void * transaction)
 {
-     return sqlite3_step(processHandler);
+    int nRet =  sqlite3_step(processHandler);
+    return (nRet == SQLITE_ROW) ? OK : FAIL;
 }
 
 static int DeleteTransactionDelegate(sqlite3_stmt * processHandler, void * transaction)
 {
- return sqlite3_step(processHandler);
+    int nRet =  sqlite3_step(processHandler);
+    return (nRet == SQLITE_ROW) ? OK : FAIL;
 }
 
 static int GetOneTransactionDelegate(sqlite3_stmt * processHandler, void * transaction)
