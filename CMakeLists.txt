@@ -18,5 +18,5 @@ add_executable(${PROJECT_NAME} ${SOURCE_DIR}/index.c)
 target_link_libraries(${PROJECT_NAME} DB ${CMAKE_THREAD_LIBS_INIT} dl)
 
 add_library(DB ${SOURCE_DIR}/services/transactions.c 
-${SOURCE_DIR}/helpers/dbHelper.c ${SOURCE_DIR}/helpers/sqlite/sqlite3.c ${SOURCE_DIR}/helpers/sqlite/sqlite3.h)
+${SOURCE_DIR}/helpers/dbHelper.c ${SOURCE_DIR}/helpers/sqlite/sqlite3.c)
 
