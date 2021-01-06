@@ -2,7 +2,7 @@
 
 int main(void)
 {
-   if(OK != InitDB(DB_NAME))
+   if(OK != InitDB("no_extensions.png"))
    {
        printf("%s\n", LastErrorDB());
        return QUIT;
