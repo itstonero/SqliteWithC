@@ -1,7 +1,9 @@
 #include <appInc.h>
 
-int main()
+int main(int argc, char * argv[])
 {
-    int nRet = InitDB();
+    
+    int nRet = InitDB(argv[0]);
+    
     return nRet;
 }

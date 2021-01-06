@@ -16,7 +16,7 @@ include_directories(${SOURCE_DIR}/include)
 include_directories(${SOURCE_DIR}/helpers/sqlite)
 
 add_executable(${PROJECT_NAME} ${SOURCE_DIR}/index.c)
-target_link_libraries(${PROJECT_NAME} DB ${CMAKE_THREAD_LIBS_INIT} dl)
+target_link_libraries(${PROJECT_NAME} DB ${CMAKE_THREAD_LIBS_INIT} ${CMAKE_DL_LIBS})
 
 add_library(DB ${SOURCE_DIR}/services/transactions.c 
 ${SOURCE_DIR}/helpers/dbHelper.c ${SOURCE_DIR}/helpers/sqlite/sqlite3.c)

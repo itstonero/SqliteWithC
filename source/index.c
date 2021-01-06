@@ -2,7 +2,7 @@
 
 int main(void)
 {
-   if(OK != InitDB())
+   if(OK != InitDB(DB_NAME))
    {
        printf("%s\n", LastErrorDB());
        return QUIT;
@@ -20,6 +20,7 @@ int main(void)
         printf("%s\n", LastErrorDB());
         return QUIT;
     }
+    
 
     if(OK != CloseDB())
     {

@@ -31,7 +31,7 @@ typedef struct
     bool szStatus;
 }TransactionData;
 
-int InitDB(void);
+int InitDB(char * dbName);
 
 int CloseDB(void);
 

@@ -2,9 +2,9 @@
 
 static sqlite3 * dbHandler = 0;
 
-int InitDB(void)
+int InitDB(char * dbName)
 {
-    return sqlite3_open(DB_NAME, &dbHandler);
+    return sqlite3_open((dbName ? dbName : DB_NAME), &dbHandler);
 }
 
 int CloseDB(void)

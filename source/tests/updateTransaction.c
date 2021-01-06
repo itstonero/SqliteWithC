@@ -2,7 +2,7 @@
 
 int main()
 {
-    int nRet = InitDB() + InitTransactionTable();
+    int nRet = InitDB(DB_NAME) + InitTransactionTable();
 
     if(nRet == 0)
     {
